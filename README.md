@@ -1,39 +1,208 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+this is just a poc for the menu builder package 
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+here is a json example 
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
 
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+{
+   "homeListItems":[
+      {
+         "buttonType":"iconCarousel",
+         "buttonItems":[
+            {
+               "iconCode":"0xe6a1",
+               "imageUrl":null,
+               "label":"Cameras",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":"0xe37b",
+               "imageUrl":null,
+               "label":"Lighting",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":"0xe656",
+               "imageUrl":null,
+               "label":"Climate",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":"0xe6e7",
+               "imageUrl":null,
+               "label":"Wifi",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":"0xe378",
+               "imageUrl":null,
+               "label":"Media",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":"0xf0794",
+               "imageUrl":null,
+               "label":"Security",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":"0xe3d8",
+               "imageUrl":null,
+               "label":"Safety",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":"0xe047",
+               "imageUrl":null,
+               "label":"More",
+               "navPath":"/notFound"
+            }
+         ]
+      },
+      {
+         "buttonType":"textCarousel",
+         "buttonItems":[
+            {
+               "iconCode":null,
+               "imageUrl":null,
+               "label":"Cameras",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":null,
+               "imageUrl":null,
+               "label":"Lighting",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":null,
+               "imageUrl":null,
+               "label":"Climate",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":null,
+               "imageUrl":null,
+               "label":"Wifi",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":null,
+               "imageUrl":null,
+               "label":"Media",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":null,
+               "imageUrl":null,
+               "label":"Security",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":null,
+               "imageUrl":null,
+               "label":"Safety",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":null,
+               "imageUrl":null,
+               "label":"More",
+               "navPath":"/notFound"
+            }
+         ]
+      },
+      {
+         "buttonType":"imageCarousel",
+         "buttonItems":[
+            {
+               "iconCode":null,
+               "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_1.png",
+               "label":"The Flow",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":null,
+               "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_2.png",
+               "label":"Through the Pane",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":null,
+               "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_3.png",
+               "label":"Iridescence",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":null,
+               "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_4.png",
+               "label":"Sea Change",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":null,
+               "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_5.png",
+               "label":"Blue Symphony",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":null,
+               "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_6.png",
+               "label":"When It Rains",
+               "navPath":"/notFound"
+            }
+         ]
+      },
+      {
+         "buttonType":"imageButton",
+         "buttonItems":[
+            {
+               "iconCode":null,
+               "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_1.png",
+               "label":"The Flow",
+               "navPath":"/notFound"
+            }
+         ]
+      },
+      {
+         "buttonType":"imageButton",
+         "buttonItems":[
+            {
+               "iconCode":null,
+               "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_1.png",
+               "label":"The Flow",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":null,
+               "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_2.png",
+               "label":"Through the Pane",
+               "navPath":"/notFound"
+            }
+         ]
+      },
+      {
+         "buttonType":"imageButton",
+         "buttonItems":[
+            {
+               "iconCode":null,
+               "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_1.png",
+               "label":"The Flow",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":null,
+               "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_2.png",
+               "label":"Through the Pane",
+               "navPath":"/notFound"
+            },
+            {
+               "iconCode":null,
+               "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_3.png",
+               "label":"Iridescence",
+               "navPath":"/notFound"
+            }
+         ]
+      }
+   ]
+}
