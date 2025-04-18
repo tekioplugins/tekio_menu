@@ -4,29 +4,29 @@ import 'package:tekio_menu/features/image_button.dart';
 import 'package:tekio_menu/features/image_carousel.dart';
 import 'package:tekio_menu/features/text_carousel.dart';
 import 'package:tekio_menu/models/custom_button_enum.dart';
-import 'package:tekio_menu/models/custom_list_button_model.dart';
+import 'package:tekio_menu/models/custom_button_model.dart';
 
 class TekioButtonLayoutBuilder extends StatelessWidget {
-  final CustomListButtonModel customListButtonModel;
+  final CustomButtonEnum buttonType;
+  final List<CustomButtonModel> buttonItems;
 
   const TekioButtonLayoutBuilder({
-    required this.customListButtonModel,
+    required this.buttonType,
+    required this.buttonItems,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    switch (customListButtonModel.buttonType) {
+    switch (buttonType) {
       case CustomButtonEnum.iconCarousel:
-        return TekioIconCarousel(customListButtonModel: customListButtonModel);
+        return TekioIconCarousel(buttonItems: buttonItems);
       case CustomButtonEnum.textCarousel:
-        return TekioTextCarousel(customListButtonModel: customListButtonModel);
+        return TekioTextCarousel(buttonItems: buttonItems);
       case CustomButtonEnum.imageCarousel:
-        return TekioImageCarousel(customListButtonModel: customListButtonModel);
+        return TekioImageCarousel(buttonItems: buttonItems);
       case CustomButtonEnum.imageButton:
-        return TekioImageButton(customListButtonModel: customListButtonModel);
-      default:
-        return const SizedBox.shrink();
+        return TekioImageButton(buttonItems: buttonItems);
     }
   }
 }
