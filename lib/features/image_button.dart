@@ -20,7 +20,7 @@ class TekioImageButton extends StatelessWidget {
                       style: ButtonStyle(
                         padding: WidgetStatePropertyAll(EdgeInsets.zero),
                       ),
-                      onPressed: () => print('object'),
+                      onPressed: () => print(e.navPath),
                       child: Stack(
                         alignment: AlignmentDirectional.bottomStart,
                         children: [
