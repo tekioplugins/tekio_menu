@@ -1,0 +1,223 @@
+
+# Tekio Forms Documentation!
+
+Welcome to the Tekio Forms Documentation.
+
+## Documentations
+
+- [Base Menu Builder](/documentation/base_menu_builder.md)
+
+- [Icon Carousel](/documentation/icon_carousel.md)
+
+- [Image Carousel](/documentation/image_carousel.md)
+
+- [Text Carousel](/documentation/text_carousel.md)
+
+- [Image Button](/documentation/image_button.md)
+
+## Example
+
+This is a simple example for rapid testing.
+
+    {
+        "homeListItems":[
+            {
+                "buttonType":"iconCarousel",
+                "buttonItems":[
+                    {
+                    "iconCode":"0xe6a1",
+                    "imageUrl":null,
+                    "label":"Cameras",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":"0xe37b",
+                    "imageUrl":null,
+                    "label":"Lighting",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":"0xe656",
+                    "imageUrl":null,
+                    "label":"Climate",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":"0xe6e7",
+                    "imageUrl":null,
+                    "label":"Wifi",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":"0xe378",
+                    "imageUrl":null,
+                    "label":"Media",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":"0xf0794",
+                    "imageUrl":null,
+                    "label":"Security",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":"0xe3d8",
+                    "imageUrl":null,
+                    "label":"Safety",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":"0xe047",
+                    "imageUrl":null,
+                    "label":"More",
+                    "navPath":"/notFound"
+                    }
+                ]
+            },
+            {
+                "buttonType":"textCarousel",
+                "buttonItems":[
+                    {
+                    "iconCode":null,
+                    "imageUrl":null,
+                    "label":"Cameras",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":null,
+                    "imageUrl":null,
+                    "label":"Lighting",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":null,
+                    "imageUrl":null,
+                    "label":"Climate",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":null,
+                    "imageUrl":null,
+                    "label":"Wifi",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":null,
+                    "imageUrl":null,
+                    "label":"Media",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":null,
+                    "imageUrl":null,
+                    "label":"Security",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":null,
+                    "imageUrl":null,
+                    "label":"Safety",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":null,
+                    "imageUrl":null,
+                    "label":"More",
+                    "navPath":"/notFound"
+                    }
+                ]
+            },
+            {
+                "buttonType":"imageCarousel",
+                "buttonItems":[
+                    {
+                    "iconCode":null,
+                    "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_1.png",
+                    "label":"The Flow",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":null,
+                    "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_2.png",
+                    "label":"Through the Pane",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":null,
+                    "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_3.png",
+                    "label":"Iridescence",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":null,
+                    "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_4.png",
+                    "label":"Sea Change",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":null,
+                    "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_5.png",
+                    "label":"Blue Symphony",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":null,
+                    "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_6.png",
+                    "label":"When It Rains",
+                    "navPath":"/notFound"
+                    }
+                ]
+            },
+            {
+                "buttonType":"imageButton",
+                "buttonItems":[
+                    {
+                    "iconCode":null,
+                    "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_1.png",
+                    "label":"The Flow",
+                    "navPath":"/notFound"
+                    }
+                ]
+            },
+            {
+                "buttonType":"imageButton",
+                "buttonItems":[
+                    {
+                    "iconCode":null,
+                    "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_1.png",
+                    "label":"The Flow",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":null,
+                    "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_2.png",
+                    "label":"Through the Pane",
+                    "navPath":"/notFound"
+                    }
+                ]
+            },
+            {
+                "buttonType":"imageButton",
+                "buttonItems":[
+                    {
+                    "iconCode":null,
+                    "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_1.png",
+                    "label":"The Flow",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":null,
+                    "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_2.png",
+                    "label":"Through the Pane",
+                    "navPath":"/notFound"
+                    },
+                    {
+                    "iconCode":null,
+                    "imageUrl":"https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_3.png",
+                    "label":"Iridescence",
+                    "navPath":"/notFound"
+                    }
+                ]
+            }
+        ]
+    }
