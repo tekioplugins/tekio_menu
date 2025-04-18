@@ -23,7 +23,7 @@ class TekioImageButton extends StatelessWidget {
                       ),
                       onPressed:
                           () => TekioMenuNotifier(
-                            navPath: e.navPath ?? '',
+                            navPath: e.navPath,
                           ).dispatch(context),
                       child: Stack(
                         alignment: AlignmentDirectional.bottomStart,

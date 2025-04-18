@@ -9,14 +9,15 @@ part of '../../models/base_menu_model.dart';
 BaseMenuModel _$BaseMenuModelFromJson(
   Map<String, dynamic> json,
 ) => BaseMenuModel(
-  homeListItems:
+  menuListItems:
       (json['homeListItems'] as List<dynamic>)
           .map((e) => CustomListButtonModel.fromJson(e as Map<String, dynamic>))
           .toList(),
-)..menuKey = json['menuKey'] as String?;
+  menuKey: json['menuKey'] as String?,
+);
 
 Map<String, dynamic> _$BaseMenuModelToJson(BaseMenuModel instance) =>
     <String, dynamic>{
       'menuKey': instance.menuKey,
-      'homeListItems': instance.homeListItems,
+      'homeListItems': instance.menuListItems,
     };

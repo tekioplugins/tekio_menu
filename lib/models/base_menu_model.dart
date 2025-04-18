@@ -8,9 +8,9 @@ class BaseMenuModel {
   @JsonKey(name: 'menuKey')
   String? menuKey;
   @JsonKey(name: 'homeListItems')
-  List<CustomListButtonModel> homeListItems;
+  List<CustomListButtonModel> menuListItems;
 
-  BaseMenuModel({required this.homeListItems});
+  BaseMenuModel({required this.menuListItems, this.menuKey});
 
   factory BaseMenuModel.fromJson(Map<String, dynamic> json) =>
       _$BaseMenuModelFromJson(json);

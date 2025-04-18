@@ -9,21 +9,19 @@ part of '../../models/custom_list_button_model.dart';
 CustomListButtonModel _$CustomListButtonModelFromJson(
   Map<String, dynamic> json,
 ) => CustomListButtonModel(
-  buttonType: $enumDecodeNullable(
-    _$CustomButtonEnumEnumMap,
-    json['buttonType'],
-  ),
+  buttonType: $enumDecode(_$CustomButtonEnumEnumMap, json['buttonType']),
   buttonItems:
       (json['buttonItems'] as List<dynamic>)
           .map((e) => CustomButtonModel.fromJson(e as Map<String, dynamic>))
           .toList(),
-)..buttonListKey = json['buttonListKey'] as String?;
+  buttonListKey: json['buttonListKey'] as String?,
+);
 
 Map<String, dynamic> _$CustomListButtonModelToJson(
   CustomListButtonModel instance,
 ) => <String, dynamic>{
   'buttonListKey': instance.buttonListKey,
-  'buttonType': _$CustomButtonEnumEnumMap[instance.buttonType],
+  'buttonType': _$CustomButtonEnumEnumMap[instance.buttonType]!,
   'buttonItems': instance.buttonItems,
 };
 

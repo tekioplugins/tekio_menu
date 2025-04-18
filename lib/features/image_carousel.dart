@@ -16,7 +16,7 @@ class TekioImageCarousel extends StatelessWidget {
         shrinkExtent: 200,
         onTap:
             (index) => TekioMenuNotifier(
-              navPath: buttonItems[index].navPath ?? '',
+              navPath: buttonItems[index].navPath,
             ).dispatch(context),
         children:
             buttonItems

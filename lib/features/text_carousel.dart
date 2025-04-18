@@ -16,7 +16,7 @@ class TekioTextCarousel extends StatelessWidget {
         shrinkExtent: 120.0,
         onTap:
             (index) => TekioMenuNotifier(
-              navPath: buttonItems[index].navPath ?? '',
+              navPath: buttonItems[index].navPath,
             ).dispatch(context),
         children:
             buttonItems.map((e) {

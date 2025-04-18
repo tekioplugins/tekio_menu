@@ -21,10 +21,10 @@ class TekioBaseMenuBuilder extends StatelessWidget {
       },
       child: ListView(
         children:
-            baseMenuData.homeListItems
+            baseMenuData.menuListItems
                 .map(
                   (e) => TekioButtonLayoutBuilder(
-                    buttonType: e.buttonType!,
+                    buttonType: e.buttonType,
                     buttonItems: e.buttonItems,
                     key: Key(e.buttonListKey ?? ''),
                   ),

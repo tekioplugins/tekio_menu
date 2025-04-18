@@ -40,7 +40,7 @@ Welcome to the Tekio Forms Documentation.
     
 		    baseMenuData:  BaseMenuModel.fromJson(YOUR JSON CONFIG),
 		    
-		    navigateTo: (path) =>  USE YOU NAVIGATION,
+		    navigateTo: (path) =>  USE YOUR NAVIGATION PACKAGE,
 		    
 		),
 
@@ -53,7 +53,7 @@ Welcome to the Tekio Forms Documentation.
 This is a example for rapid testing.
 
     {
-       "homeListItems":[
+       "menuListItems":[
           {
              "buttonType":"iconCarousel",
              "buttonItems":[
