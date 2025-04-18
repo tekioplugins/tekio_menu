@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:tekio_menu/features/base_menu_builder.dart';
-import 'package:tekio_menu/models/custom_button_model.dart';
+import 'package:tekio_menu/models/custom_list_button_model.dart';
 
 class TekioIconCarousel extends StatelessWidget {
-  final List<CustomButtonModel> buttonItems;
-  const TekioIconCarousel({required this.buttonItems, super.key});
+  final CustomListButtonModel customListButtonModel;
+  const TekioIconCarousel({required this.customListButtonModel, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +15,10 @@ class TekioIconCarousel extends StatelessWidget {
         shrinkExtent: 120.0,
         onTap:
             (index) => TekioMenuNotifier(
-              navPath: buttonItems[index].navPath ?? '',
+              navPath: customListButtonModel.buttonItems[index].navPath ?? '',
             ).dispatch(context),
         children:
-            buttonItems.map((e) {
+            customListButtonModel.buttonItems.map((e) {
               return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,

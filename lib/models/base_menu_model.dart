@@ -5,6 +5,9 @@ part '../generated/models/base_menu_model.g.dart';
 
 @JsonSerializable()
 class BaseMenuModel {
+  @JsonKey(name: 'menuKey')
+  String? menuKey;
+  @JsonKey(name: 'homeListItems')
   List<CustomListButtonModel> homeListItems;
 
   BaseMenuModel({required this.homeListItems});

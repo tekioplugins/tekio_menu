@@ -14,6 +14,7 @@ class TekioBaseMenuBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NotificationListener<TekioMenuNotifier>(
+      key: Key(baseMenuData.menuKey ?? ''),
       onNotification: (notification) {
         navigateTo(notification.navPath);
         return true;
@@ -21,12 +22,7 @@ class TekioBaseMenuBuilder extends StatelessWidget {
       child: ListView(
         children:
             baseMenuData.homeListItems
-                .map(
-                  (e) => TekioButtonLayoutBuilder(
-                    customButtonType: e.buttonType!,
-                    buttonItems: e.buttonItems,
-                  ),
-                )
+                .map((e) => TekioButtonLayoutBuilder(customListButtonModel: e))
                 .toList(),
       ),
     );

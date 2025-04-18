@@ -32,6 +32,19 @@ Welcome to the Tekio Forms Documentation.
 - [Image Button](/documentation/image_button.md)
 
   
+## How to use
+
+  
+
+    	TekioBaseMenuBuilder(
+    
+		    baseMenuData:  BaseMenuModel.fromJson(YOUR JSON CONFIG),
+		    
+		    navigateTo: (path) =>  USE YOU NAVIGATION,
+		    
+		),
+
+
 
 ## Example
 

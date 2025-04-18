@@ -6,6 +6,8 @@ part '../generated/models/custom_list_button_model.g.dart';
 
 @JsonSerializable()
 class CustomListButtonModel {
+  @JsonKey(name: 'buttonListKey')
+  String? buttonListKey;
   @JsonKey(name: 'buttonType')
   CustomButtonEnum? buttonType;
   @JsonKey(name: 'buttonItems')

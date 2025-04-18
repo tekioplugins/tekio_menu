@@ -9,8 +9,10 @@ This creates a carousel of text with a title on the bottom.
 
 You can edit the following fields:
 
+- buttonListKey - Button list key.
 - buttonType **(required)** - This defines the type of button to build this need to be **"textCarousel"** in order to build this button.
 - buttonItems **(required)** - This list contains the individual buttons use the following fields to build it:
+   - buttonKey - Button key.
 	- label - label to display 
 	- navPath **(required)** - navigation path
 
@@ -22,9 +24,11 @@ You can edit the following fields:
   
 
     {
+       "buttonListKey":"example_key",
        "buttonType":"textCarousel",
        "buttonItems":[
           {
+             "buttonKey":"example_key",
              "label":"label_example",
              "navPath":"/pathToScreen"
           }

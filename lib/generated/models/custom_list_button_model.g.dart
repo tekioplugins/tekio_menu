@@ -17,11 +17,12 @@ CustomListButtonModel _$CustomListButtonModelFromJson(
       (json['buttonItems'] as List<dynamic>)
           .map((e) => CustomButtonModel.fromJson(e as Map<String, dynamic>))
           .toList(),
-);
+)..buttonListKey = json['buttonListKey'] as String?;
 
 Map<String, dynamic> _$CustomListButtonModelToJson(
   CustomListButtonModel instance,
 ) => <String, dynamic>{
+  'buttonListKey': instance.buttonListKey,
   'buttonType': _$CustomButtonEnumEnumMap[instance.buttonType],
   'buttonItems': instance.buttonItems,
 };
