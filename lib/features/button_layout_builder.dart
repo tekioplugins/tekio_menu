@@ -1,10 +1,10 @@
 import 'package:flutter/widgets.dart';
-import 'package:tekio/widgets/buttons/icon_carousel.dart';
-import 'package:tekio/widgets/buttons/image_button.dart';
-import 'package:tekio/widgets/buttons/image_carousel.dart';
-import 'package:tekio/widgets/buttons/text_carousel.dart';
-import 'package:tekio/models/custom_button/custom_button_enum.dart';
-import 'package:tekio/models/custom_button/custom_button_model.dart';
+import 'package:tekio_menu/features/icon_carousel.dart';
+import 'package:tekio_menu/features/image_button.dart';
+import 'package:tekio_menu/features/image_carousel.dart';
+import 'package:tekio_menu/features/text_carousel.dart';
+import 'package:tekio_menu/models/custom_button_enum.dart';
+import 'package:tekio_menu/models/custom_button_model.dart';
 
 class TekioButtonLayoutBuilder extends StatelessWidget {
   final CustomButtonEnum customButtonType;
