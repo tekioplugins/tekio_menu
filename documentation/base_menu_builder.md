@@ -11,8 +11,8 @@ This is the base json necessary to create the menu.
 You can edit the following fields:
 
   
-
-- homeListItems **(required)** - This is a list of items that will consist on the menu buttons.
+- menuKey - Menu key.
+- menuListItems **(required)** - This is a list of items that will consist on the menu buttons.
 
 
 
@@ -23,7 +23,8 @@ You can edit the following fields:
   
 
     {
-       "homeListItems":[
+       "menuKey":"example_key",
+       "menuListItems":[
           // Add items here
        ]
     }

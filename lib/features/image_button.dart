@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tekio_menu/features/base_menu_builder.dart';
 import 'package:tekio_menu/models/custom_button_model.dart';
 
 class TekioImageButton extends StatelessWidget {
@@ -20,7 +21,10 @@ class TekioImageButton extends StatelessWidget {
                       style: ButtonStyle(
                         padding: WidgetStatePropertyAll(EdgeInsets.zero),
                       ),
-                      onPressed: () => print('object'),
+                      onPressed:
+                          () => TekioMenuNotifier(
+                            navPath: e.navPath,
+                          ).dispatch(context),
                       child: Stack(
                         alignment: AlignmentDirectional.bottomStart,
                         children: [

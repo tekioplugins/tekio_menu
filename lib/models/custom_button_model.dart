@@ -11,9 +11,14 @@ class CustomButtonModel {
   @JsonKey(name: 'label')
   String? label;
   @JsonKey(name: 'navPath')
-  String? navPath;
+  String navPath;
 
-  CustomButtonModel({this.iconCode, this.imageUrl, this.label, this.navPath});
+  CustomButtonModel({
+    this.iconCode,
+    this.imageUrl,
+    this.label,
+    required this.navPath,
+  });
 
   factory CustomButtonModel.fromJson(Map<String, dynamic> json) =>
       _$CustomButtonModelFromJson(json);

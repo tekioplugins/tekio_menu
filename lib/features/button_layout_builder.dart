@@ -7,18 +7,18 @@ import 'package:tekio_menu/models/custom_button_enum.dart';
 import 'package:tekio_menu/models/custom_button_model.dart';
 
 class TekioButtonLayoutBuilder extends StatelessWidget {
-  final CustomButtonEnum customButtonType;
+  final CustomButtonEnum buttonType;
   final List<CustomButtonModel> buttonItems;
 
   const TekioButtonLayoutBuilder({
-    required this.customButtonType,
+    required this.buttonType,
     required this.buttonItems,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    switch (customButtonType) {
+    switch (buttonType) {
       case CustomButtonEnum.iconCarousel:
         return TekioIconCarousel(buttonItems: buttonItems);
       case CustomButtonEnum.textCarousel:

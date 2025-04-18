@@ -4,20 +4,38 @@ import 'package:tekio_menu/models/base_menu_model.dart';
 
 class TekioBaseMenuBuilder extends StatelessWidget {
   final BaseMenuModel baseMenuData;
-  const TekioBaseMenuBuilder({required this.baseMenuData, super.key});
+  final Function(String path) navigateTo;
+  const TekioBaseMenuBuilder({
+    required this.baseMenuData,
+    required this.navigateTo,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children:
-          baseMenuData.homeListItems
-              .map(
-                (e) => TekioButtonLayoutBuilder(
-                  customButtonType: e.buttonType!,
-                  buttonItems: e.buttonItems,
-                ),
-              )
-              .toList(),
+    return NotificationListener<TekioMenuNotifier>(
+      key: Key(baseMenuData.menuKey ?? ''),
+      onNotification: (notification) {
+        navigateTo(notification.navPath);
+        return true;
+      },
+      child: ListView(
+        children:
+            baseMenuData.menuListItems
+                .map(
+                  (e) => TekioButtonLayoutBuilder(
+                    buttonType: e.buttonType,
+                    buttonItems: e.buttonItems,
+                    key: Key(e.buttonListKey ?? ''),
+                  ),
+                )
+                .toList(),
+      ),
     );
   }
+}
+
+class TekioMenuNotifier extends Notification {
+  final String navPath;
+  TekioMenuNotifier({required this.navPath});
 }

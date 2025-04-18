@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tekio_menu/features/base_menu_builder.dart';
 import 'package:tekio_menu/models/custom_button_model.dart';
 
 class TekioImageCarousel extends StatelessWidget {
@@ -13,7 +14,10 @@ class TekioImageCarousel extends StatelessWidget {
       child: CarouselView(
         itemExtent: 330,
         shrinkExtent: 200,
-        onTap: (index) => print(buttonItems[index].navPath),
+        onTap:
+            (index) => TekioMenuNotifier(
+              navPath: buttonItems[index].navPath,
+            ).dispatch(context),
         children:
             buttonItems
                 .map(

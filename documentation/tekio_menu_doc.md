@@ -32,6 +32,19 @@ Welcome to the Tekio Forms Documentation.
 - [Image Button](/documentation/image_button.md)
 
   
+## How to use
+
+  
+
+    	TekioBaseMenuBuilder(
+    
+		    baseMenuData:  BaseMenuModel.fromJson(YOUR JSON CONFIG),
+		    
+		    navigateTo: (path) =>  USE YOUR NAVIGATION PACKAGE,
+		    
+		),
+
+
 
 ## Example
 
@@ -40,7 +53,7 @@ Welcome to the Tekio Forms Documentation.
 This is a example for rapid testing.
 
     {
-       "homeListItems":[
+       "menuListItems":[
           {
              "buttonType":"iconCarousel",
              "buttonItems":[
