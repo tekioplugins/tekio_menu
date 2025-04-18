@@ -1,29 +1,39 @@
-# Text Field!
 
-This is the Text field it created the text field
+# Image Carousel
+This creates a carousel of Images with a title on the bottom.
+
+  
 
 ## Fields
 
+  
+
 You can edit the following fields:
 
- - fieldKey **(required)** - Field that represents the key value that represents the field, this needs to be unique.
- - fieldType **(required)** - This needs to be of type **textField**.
- - fieldLabel - Used to show the label of the field.
- - fieldHint - Used to show a hint for the field.
- - maxLines - Used to restrict the max lines that can be shown at a time **(default is 1)**.
- - minLines - **(requires maxLines)** Used to restrict the min lines that can be shown at a time.
- - maxLength - Used to restrict the length of the text.
+- buttonType **(required)** - This defines the type of button to build this need to be **"imageCarousel"** in order to build this button.
+- buttonItems **(required)** - This list contains the individual buttons use the following fields to build it:
+	- imageUrl **(required)**  - image url to be displayed
+	- label - label to display 
+	- navPath **(required)** - navigation path
+
+
+  
 
 ## Json Format
 
-Json format to show those fields
+  
 
     {
-       "fieldKey":"field-text-key",
-       "fieldType":"textField",
-       "fieldLabel":"text label",
-       "fieldHint":"text hint",
-       "maxLines": 2,
-       "minLines": 5,
-       "maxLength": 100
+       "buttonType":"imageCarousel",
+       "buttonItems":[
+          {
+             "imageUrl":"imagePath",
+             "label":"label_example",
+             "navPath":"/pathToScreen"
+          }
+          // Add items here
+       ]
     }
+
+  
+
