@@ -1,0 +1,16 @@
+import 'package:json_annotation/json_annotation.dart';
+import 'package:tekio_menu/models/custom_list_button_model.dart';
+
+part '../generated/models/base_menu_model.g.dart';
+
+@JsonSerializable()
+class BaseMenuModel {
+  List<CustomListButtonModel> homeListItems;
+
+  BaseMenuModel({required this.homeListItems});
+
+  factory BaseMenuModel.fromJson(Map<String, dynamic> json) =>
+      _$BaseMenuModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$BaseMenuModelToJson(this);
+}
