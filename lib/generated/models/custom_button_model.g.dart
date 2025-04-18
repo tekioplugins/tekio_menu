@@ -12,11 +12,10 @@ CustomButtonModel _$CustomButtonModelFromJson(Map<String, dynamic> json) =>
       imageUrl: json['imageUrl'] as String?,
       label: json['label'] as String?,
       navPath: json['navPath'] as String?,
-    )..buttonKey = json['buttonKey'] as String?;
+    );
 
 Map<String, dynamic> _$CustomButtonModelToJson(CustomButtonModel instance) =>
     <String, dynamic>{
-      'buttonKey': instance.buttonKey,
       'iconCode': instance.iconCode,
       'imageUrl': instance.imageUrl,
       'label': instance.label,

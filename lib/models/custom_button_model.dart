@@ -4,8 +4,6 @@ part '../generated/models/custom_button_model.g.dart';
 
 @JsonSerializable()
 class CustomButtonModel {
-  @JsonKey(name: 'buttonKey')
-  String? buttonKey;
   @JsonKey(name: 'iconCode')
   String? iconCode;
   @JsonKey(name: 'imageUrl')
