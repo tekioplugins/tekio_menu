@@ -26,7 +26,10 @@ class TekioIconCarousel extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 5.0),
                     child: Icon(
-                      IconData(int.parse(e.iconCode ?? '0xe237')),
+                      IconData(
+                        int.parse(e.iconCode ?? '0xe237'),
+                        fontFamily: 'MaterialIcons',
+                      ),
                       size: 32.0,
                     ),
                   ),
