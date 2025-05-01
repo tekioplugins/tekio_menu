@@ -10,7 +10,7 @@ BaseMenuModel _$BaseMenuModelFromJson(
   Map<String, dynamic> json,
 ) => BaseMenuModel(
   menuListItems:
-      (json['homeListItems'] as List<dynamic>)
+      (json['menuListItems'] as List<dynamic>)
           .map((e) => CustomListButtonModel.fromJson(e as Map<String, dynamic>))
           .toList(),
   menuKey: json['menuKey'] as String?,
@@ -19,5 +19,5 @@ BaseMenuModel _$BaseMenuModelFromJson(
 Map<String, dynamic> _$BaseMenuModelToJson(BaseMenuModel instance) =>
     <String, dynamic>{
       'menuKey': instance.menuKey,
-      'homeListItems': instance.menuListItems,
+      'menuListItems': instance.menuListItems,
     };

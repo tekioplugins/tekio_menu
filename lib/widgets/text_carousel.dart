@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tekio_menu/features/base_menu_builder.dart';
+import 'package:tekio_menu/widgets/base_menu_builder.dart';
 import 'package:tekio_menu/models/custom_button_model.dart';
 
 class TekioTextCarousel extends StatelessWidget {
@@ -25,6 +25,7 @@ class TekioTextCarousel extends StatelessWidget {
                 style: const TextStyle(fontWeight: FontWeight.bold),
                 overflow: TextOverflow.clip,
                 softWrap: false,
+                textAlign: TextAlign.center,
               );
             }).toList(),
       ),

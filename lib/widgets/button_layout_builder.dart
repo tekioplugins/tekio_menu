@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
-import 'package:tekio_menu/features/icon_carousel.dart';
-import 'package:tekio_menu/features/image_button.dart';
-import 'package:tekio_menu/features/image_carousel.dart';
-import 'package:tekio_menu/features/text_carousel.dart';
+import 'package:tekio_menu/widgets/icon_carousel.dart';
+import 'package:tekio_menu/widgets/image_button.dart';
+import 'package:tekio_menu/widgets/image_carousel.dart';
+import 'package:tekio_menu/widgets/text_carousel.dart';
 import 'package:tekio_menu/models/custom_button_enum.dart';
 import 'package:tekio_menu/models/custom_button_model.dart';
 
