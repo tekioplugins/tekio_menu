@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tekio_menu/features/base_menu_builder.dart';
+import 'package:tekio_menu/widgets/base_menu_builder.dart';
 import 'package:tekio_menu/models/custom_button_model.dart';
 
 class TekioImageCarousel extends StatelessWidget {

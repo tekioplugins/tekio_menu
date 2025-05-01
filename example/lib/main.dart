@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:tekio_menu/features/base_menu_builder.dart';
+import 'package:tekio_menu/widgets/base_menu_builder.dart';
 import 'package:tekio_menu/models/base_menu_model.dart';
 
 Future<void> main() async {
