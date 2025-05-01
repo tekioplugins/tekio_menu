@@ -7,7 +7,7 @@ part '../generated/models/base_menu_model.g.dart';
 class BaseMenuModel {
   @JsonKey(name: 'menuKey')
   String? menuKey;
-  @JsonKey(name: 'homeListItems')
+  @JsonKey(name: 'menuListItems')
   List<CustomListButtonModel> menuListItems;
 
   BaseMenuModel({required this.menuListItems, this.menuKey});
