@@ -8,6 +8,7 @@ part of '../../models/tekio_list_button_data.dart';
 
 TekioListButtonData _$TekioListButtonDataFromJson(Map<String, dynamic> json) =>
     TekioListButtonData(
+      order: (json['order'] as num?)?.toInt(),
       buttonType:
           $enumDecodeNullable(
             _$TekioButtonEnumEnumMap,
@@ -25,6 +26,7 @@ TekioListButtonData _$TekioListButtonDataFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$TekioListButtonDataToJson(
   TekioListButtonData instance,
 ) => <String, dynamic>{
+  'order': instance.order,
   'buttonListKey': instance.buttonListKey,
   'buttonType': _$TekioButtonEnumEnumMap[instance.buttonType]!,
   'buttonItems': instance.buttonItems,

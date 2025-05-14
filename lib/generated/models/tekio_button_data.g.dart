@@ -8,6 +8,7 @@ part of '../../models/tekio_button_data.dart';
 
 TekioButtonData _$TekioButtonDataFromJson(Map<String, dynamic> json) =>
     TekioButtonData(
+      order: (json['order'] as num?)?.toInt(),
       iconCode: json['iconCode'] as String?,
       imageUrl: json['imageUrl'] as String?,
       label: json['label'] as String?,
@@ -16,6 +17,7 @@ TekioButtonData _$TekioButtonDataFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$TekioButtonDataToJson(TekioButtonData instance) =>
     <String, dynamic>{
+      'order': instance.order,
       'iconCode': instance.iconCode,
       'imageUrl': instance.imageUrl,
       'label': instance.label,

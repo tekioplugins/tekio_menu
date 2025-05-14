@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:tekio_menu/models/tekio_list_button_data.dart';
 
@@ -10,7 +11,12 @@ class TekioMenuData {
   @JsonKey(name: 'menuListItems')
   List<TekioListButtonData> menuListItems;
 
-  TekioMenuData({required this.menuListItems, this.menuKey});
+  TekioMenuData({
+    required List<TekioListButtonData> menuListItems,
+    this.menuKey,
+  }) : menuListItems = menuListItems.sorted(
+         (a, b) => (a.order ?? 0).compareTo((b.order ?? 0)),
+       );
 
   factory TekioMenuData.fromJson(Map<String, dynamic> json) =>
       _$TekioMenuDataFromJson(json);

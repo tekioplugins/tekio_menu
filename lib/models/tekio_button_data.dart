@@ -4,6 +4,8 @@ part '../generated/models/tekio_button_data.g.dart';
 
 @JsonSerializable()
 class TekioButtonData {
+  @JsonKey(name: 'order')
+  int? order;
   @JsonKey(name: 'iconCode')
   String? iconCode;
   @JsonKey(name: 'imageUrl')
@@ -14,6 +16,7 @@ class TekioButtonData {
   String navPath;
 
   TekioButtonData({
+    this.order,
     this.iconCode,
     this.imageUrl,
     this.label,
