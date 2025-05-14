@@ -1,7 +1,8 @@
 name: tekio_menu
 description: "A plugin to build a menu"
 version: 0.0.1
-homepage:
+homepage: https://github.com/tekioplugins/tekio_menu
+repository: https://github.com/tekioplugins/tekio_menu
 
 environment:
   sdk: ^3.7.2
