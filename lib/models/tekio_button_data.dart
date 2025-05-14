@@ -1,9 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part '../generated/models/custom_button_model.g.dart';
+part '../generated/models/tekio_button_data.g.dart';
 
 @JsonSerializable()
-class CustomButtonModel {
+class TekioButtonData {
   @JsonKey(name: 'iconCode')
   String? iconCode;
   @JsonKey(name: 'imageUrl')
@@ -13,15 +13,15 @@ class CustomButtonModel {
   @JsonKey(name: 'navPath')
   String navPath;
 
-  CustomButtonModel({
+  TekioButtonData({
     this.iconCode,
     this.imageUrl,
     this.label,
     required this.navPath,
   });
 
-  factory CustomButtonModel.fromJson(Map<String, dynamic> json) =>
-      _$CustomButtonModelFromJson(json);
+  factory TekioButtonData.fromJson(Map<String, dynamic> json) =>
+      _$TekioButtonDataFromJson(json);
 
-  Map<String, dynamic> toJson() => _$CustomButtonModelToJson(this);
+  Map<String, dynamic> toJson() => _$TekioButtonDataToJson(this);
 }

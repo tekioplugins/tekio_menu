@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tekio_menu/widgets/button_layout_builder.dart';
-import 'package:tekio_menu/models/base_menu_model.dart';
+import 'package:tekio_menu/models/tekio_menu_data.dart';
 
 class TekioBaseMenuBuilder extends StatelessWidget {
-  final BaseMenuModel baseMenuData;
+  final TekioMenuData baseMenuData;
   final Function(String path) navigateTo;
   const TekioBaseMenuBuilder({
     required this.baseMenuData,
@@ -22,13 +21,7 @@ class TekioBaseMenuBuilder extends StatelessWidget {
       child: ListView(
         children:
             baseMenuData.menuListItems
-                .map(
-                  (e) => TekioButtonLayoutBuilder(
-                    buttonType: e.buttonType,
-                    buttonItems: e.buttonItems,
-                    key: Key(e.buttonListKey ?? ''),
-                  ),
-                )
+                .map((e) => e.buttonType.buildButton(e.buttonItems))
                 .toList(),
       ),
     );

@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:tekio_menu/models/tekio_menu_data.dart';
 import 'package:tekio_menu/widgets/base_menu_builder.dart';
-import 'package:tekio_menu/models/base_menu_model.dart';
 
 Future<void> main() async {
   runApp(FormExample());
@@ -29,7 +29,7 @@ class _FormExampleState extends State<FormExample> {
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               return TekioBaseMenuBuilder(
-                baseMenuData: BaseMenuModel.fromJson(
+                baseMenuData: TekioMenuData.fromJson(
                   jsonDecode(snapshot.data!),
                 ),
                 navigateTo: (path) => print(path),
