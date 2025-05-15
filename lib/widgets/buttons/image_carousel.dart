@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:tekio_menu/models/tekio_list_button_data.dart';
 import 'package:tekio_menu/widgets/base_menu_builder.dart';
-import 'package:tekio_menu/models/tekio_button_data.dart';
 
 class TekioImageCarousel extends StatelessWidget {
-  final List<TekioButtonData> buttonItems;
+  final TekioListButtonData buttonItems;
 
   const TekioImageCarousel({required this.buttonItems, super.key});
 
@@ -16,10 +16,10 @@ class TekioImageCarousel extends StatelessWidget {
         shrinkExtent: 200,
         onTap:
             (index) => TekioMenuNotifier(
-              navPath: buttonItems[index].navPath,
+              navPath: buttonItems.buttonItems[index].navPath,
             ).dispatch(context),
         children:
-            buttonItems
+            buttonItems.buttonItems
                 .map(
                   (e) => Stack(
                     alignment: AlignmentDirectional.bottomStart,

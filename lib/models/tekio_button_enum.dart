@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:tekio_menu/models/tekio_button_data.dart';
+import 'package:tekio_menu/models/tekio_list_button_data.dart';
 import 'package:tekio_menu/utils/tekio_menu_builders.dart';
 
 enum TekioButtonEnum {
@@ -14,9 +14,9 @@ enum TekioButtonEnum {
   imageButton(buildImageButton),
   unknown(buildUnknown);
 
-  final Widget Function(List<TekioButtonData>) builder;
+  final Widget Function(TekioListButtonData) builder;
 
   const TekioButtonEnum(this.builder);
 
-  Widget buildButton(List<TekioButtonData> buttonItems) => builder(buttonItems);
+  Widget buildButton(TekioListButtonData buttonItems) => builder(buttonItems);
 }

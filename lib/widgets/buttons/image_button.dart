@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:tekio_menu/models/tekio_list_button_data.dart';
 import 'package:tekio_menu/widgets/base_menu_builder.dart';
-import 'package:tekio_menu/models/tekio_button_data.dart';
 
 class TekioImageButton extends StatelessWidget {
-  final List<TekioButtonData> buttonItems;
+  final TekioListButtonData buttonItems;
 
   const TekioImageButton({required this.buttonItems, super.key});
 
@@ -14,7 +14,7 @@ class TekioImageButton extends StatelessWidget {
       constraints: const BoxConstraints(maxHeight: 200),
       child: Row(
         children:
-            buttonItems
+            buttonItems.buttonItems
                 .map(
                   (e) => Flexible(
                     child: ElevatedButton(

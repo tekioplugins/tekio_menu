@@ -6,6 +6,8 @@ part '../generated/models/tekio_button_data.g.dart';
 class TekioButtonData {
   @JsonKey(name: 'order')
   int? order;
+  @JsonKey(name: 'buttonKey')
+  String? buttonKey;
   @JsonKey(name: 'iconCode')
   String? iconCode;
   @JsonKey(name: 'imageUrl')
@@ -17,6 +19,7 @@ class TekioButtonData {
 
   TekioButtonData({
     this.order,
+    this.buttonKey,
     this.iconCode,
     this.imageUrl,
     this.label,
