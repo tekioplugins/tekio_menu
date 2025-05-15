@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tekio_menu/models/tekio_menu_data.dart';
@@ -32,7 +33,11 @@ class _FormExampleState extends State<FormExample> {
                 baseMenuData: TekioMenuData.fromJson(
                   jsonDecode(snapshot.data!),
                 ),
-                navigateTo: (path) => print(path),
+                navigateTo: (path) {
+                  if (kDebugMode) {
+                    print(path);
+                  }
+                },
               );
             }
             return CircularProgressIndicator();
