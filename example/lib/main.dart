@@ -10,14 +10,9 @@ Future<void> main() async {
   runApp(FormExample());
 }
 
-class FormExample extends StatefulWidget {
-  const FormExample({super.key});
+class FormExample extends StatelessWidget {
+  FormExample({super.key});
 
-  @override
-  State<FormExample> createState() => _FormExampleState();
-}
-
-class _FormExampleState extends State<FormExample> {
   final ColorScheme colorScheme = ColorScheme.fromSeed(seedColor: Colors.green);
 
   @override
