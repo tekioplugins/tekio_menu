@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:tekio_menu/models/tekio_list_button_data.dart';
+import 'package:tekio_menu/models/tekio_menu_button_data.dart';
 import 'package:tekio_menu/widgets/base_menu_builder.dart';
 
 class TekioTextCarousel extends StatelessWidget {
-  final TekioListButtonData buttonItems;
+  final TekioMenuButtonData menuButton;
 
-  const TekioTextCarousel({required this.buttonItems, super.key});
+  const TekioTextCarousel({required this.menuButton, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +16,10 @@ class TekioTextCarousel extends StatelessWidget {
         shrinkExtent: 120.0,
         onTap:
             (index) => TekioMenuNotifier(
-              navPath: buttonItems.buttonItems[index].navPath,
+              navPath: menuButton.buttonItems[index].navPath,
             ).dispatch(context),
         children:
-            buttonItems.buttonItems.map((e) {
+            menuButton.buttonItems.map((e) {
               return Text(
                 e.label ?? '',
                 style: const TextStyle(fontWeight: FontWeight.bold),

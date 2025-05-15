@@ -1,6 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:tekio_menu/models/tekio_list_button_data.dart';
+import 'package:tekio_menu/models/tekio_menu_button_data.dart';
 
 part '../generated/models/tekio_menu_data.g.dart';
 
@@ -8,13 +8,13 @@ part '../generated/models/tekio_menu_data.g.dart';
 class TekioMenuData {
   @JsonKey(name: 'menuKey')
   String? menuKey;
-  @JsonKey(name: 'menuListItems')
-  List<TekioListButtonData> menuListItems;
+  @JsonKey(name: 'menuListButtons')
+  List<TekioMenuButtonData> menuListButtons;
 
   TekioMenuData({
-    required List<TekioListButtonData> menuListItems,
+    required List<TekioMenuButtonData> menuListButtons,
     this.menuKey,
-  }) : menuListItems = menuListItems.sorted(
+  }) : menuListButtons = menuListButtons.sorted(
          (a, b) => (a.order ?? 0).compareTo((b.order ?? 0)),
        );
 

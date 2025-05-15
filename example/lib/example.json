@@ -1,6 +1,6 @@
 {
    "menuKey": "menuKeyExample",
-   "menuListItems": [
+   "menuListButtons": [
       {
          "buttonType": "iconCarousel",
          "buttonItems": [

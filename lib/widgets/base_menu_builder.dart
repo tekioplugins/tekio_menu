@@ -13,7 +13,7 @@ class TekioBaseMenuBuilder extends NotificationListener<TekioMenuNotifier> {
         },
         child: ListView(
           children:
-              baseMenuData.menuListItems
+              baseMenuData.menuListButtons
                   .map((e) => e.buttonType.buildButton(e))
                   .toList(),
         ),

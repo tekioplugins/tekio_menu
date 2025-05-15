@@ -3,14 +3,14 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:tekio_menu/models/tekio_button_enum.dart';
 import 'package:tekio_menu/models/tekio_button_data.dart';
 
-part '../generated/models/tekio_list_button_data.g.dart';
+part '../generated/models/tekio_menu_button_data.g.dart';
 
 @JsonSerializable()
-class TekioListButtonData {
+class TekioMenuButtonData {
   @JsonKey(name: 'order')
   int? order;
-  @JsonKey(name: 'buttonListKey')
-  String? buttonListKey;
+  @JsonKey(name: 'menuButtonKey')
+  String? menuButtonKey;
   @JsonKey(
     name: 'buttonType',
     defaultValue: TekioButtonEnum.unknown,
@@ -20,17 +20,17 @@ class TekioListButtonData {
   @JsonKey(name: 'buttonItems')
   List<TekioButtonData> buttonItems;
 
-  TekioListButtonData({
+  TekioMenuButtonData({
     this.order,
     required this.buttonType,
     required List<TekioButtonData> buttonItems,
-    this.buttonListKey,
+    this.menuButtonKey,
   }) : buttonItems = buttonItems.sorted(
          (a, b) => (a.order ?? 0).compareTo((b.order ?? 0)),
        );
 
-  factory TekioListButtonData.fromJson(Map<String, dynamic> json) =>
-      _$TekioListButtonDataFromJson(json);
+  factory TekioMenuButtonData.fromJson(Map<String, dynamic> json) =>
+      _$TekioMenuButtonDataFromJson(json);
 
-  Map<String, dynamic> toJson() => _$TekioListButtonDataToJson(this);
+  Map<String, dynamic> toJson() => _$TekioMenuButtonDataToJson(this);
 }

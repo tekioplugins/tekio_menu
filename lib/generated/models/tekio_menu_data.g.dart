@@ -8,10 +8,10 @@ part of '../../models/tekio_menu_data.dart';
 
 TekioMenuData _$TekioMenuDataFromJson(Map<String, dynamic> json) =>
     TekioMenuData(
-      menuListItems:
-          (json['menuListItems'] as List<dynamic>)
+      menuListButtons:
+          (json['menuListButtons'] as List<dynamic>)
               .map(
-                (e) => TekioListButtonData.fromJson(e as Map<String, dynamic>),
+                (e) => TekioMenuButtonData.fromJson(e as Map<String, dynamic>),
               )
               .toList(),
       menuKey: json['menuKey'] as String?,
@@ -20,5 +20,5 @@ TekioMenuData _$TekioMenuDataFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$TekioMenuDataToJson(TekioMenuData instance) =>
     <String, dynamic>{
       'menuKey': instance.menuKey,
-      'menuListItems': instance.menuListItems,
+      'menuListButtons': instance.menuListButtons,
     };
