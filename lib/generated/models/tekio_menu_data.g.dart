@@ -9,11 +9,12 @@ part of '../../models/tekio_menu_data.dart';
 TekioMenuData _$TekioMenuDataFromJson(Map<String, dynamic> json) =>
     TekioMenuData(
       menuListButtons:
-          (json['menuListButtons'] as List<dynamic>)
-              .map(
+          (json['menuListButtons'] as List<dynamic>?)
+              ?.map(
                 (e) => TekioMenuButtonData.fromJson(e as Map<String, dynamic>),
               )
-              .toList(),
+              .toList() ??
+          [],
       menuKey: json['menuKey'] as String?,
     );
 

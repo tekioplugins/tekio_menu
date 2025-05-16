@@ -17,16 +17,19 @@ TekioMenuButtonData _$TekioMenuButtonDataFromJson(Map<String, dynamic> json) =>
           ) ??
           TekioButtonEnum.unknown,
       buttonItems:
-          (json['buttonItems'] as List<dynamic>)
-              .map((e) => TekioButtonData.fromJson(e as Map<String, dynamic>))
-              .toList(),
+          (json['buttonItems'] as List<dynamic>?)
+              ?.map((e) => TekioButtonData.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          [],
       menuButtonKey: json['menuButtonKey'] as String?,
+      menuButtonHeight: (json['menuButtonHeight'] as num?)?.toDouble() ?? 100.0,
     );
 
 Map<String, dynamic> _$TekioMenuButtonDataToJson(
   TekioMenuButtonData instance,
 ) => <String, dynamic>{
   'order': instance.order,
+  'menuButtonHeight': instance.menuButtonHeight,
   'menuButtonKey': instance.menuButtonKey,
   'buttonType': _$TekioButtonEnumEnumMap[instance.buttonType]!,
   'buttonItems': instance.buttonItems,

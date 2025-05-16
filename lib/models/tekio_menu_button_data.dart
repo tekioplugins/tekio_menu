@@ -9,6 +9,8 @@ part '../generated/models/tekio_menu_button_data.g.dart';
 class TekioMenuButtonData {
   @JsonKey(name: 'order')
   int? order;
+  @JsonKey(name: 'menuButtonHeight', defaultValue: 100.0)
+  double? menuButtonHeight;
   @JsonKey(name: 'menuButtonKey')
   String? menuButtonKey;
   @JsonKey(
@@ -25,6 +27,7 @@ class TekioMenuButtonData {
     required this.buttonType,
     required List<TekioButtonData> buttonItems,
     this.menuButtonKey,
+    this.menuButtonHeight,
   }) : buttonItems = buttonItems.sorted(
          (a, b) => (a.order ?? 0).compareTo((b.order ?? 0)),
        );

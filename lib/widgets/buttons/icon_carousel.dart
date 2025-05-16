@@ -2,48 +2,44 @@ import 'package:flutter/material.dart';
 import 'package:tekio_menu/models/tekio_menu_button_data.dart';
 import 'package:tekio_menu/widgets/base_menu_builder.dart';
 
-class TekioIconCarousel extends StatelessWidget {
+class TekioIconCarousel extends Builder {
   final TekioMenuButtonData menuButton;
-  const TekioIconCarousel({required this.menuButton, super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ConstrainedBox(
-      constraints: const BoxConstraints(maxHeight: 100),
-      child: CarouselView(
-        itemExtent: 120.0,
-        shrinkExtent: 120.0,
-        onTap:
-            (index) => TekioMenuNotifier(
-              navPath: menuButton.buttonItems[index].navPath,
-            ).dispatch(context),
-        children:
-            menuButton.buttonItems.map((e) {
-              return Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 5.0),
-                    child: Icon(
-                      IconData(
-                        int.parse(e.iconCode ?? '0xe237'),
-                        fontFamily: 'MaterialIcons',
-                      ),
-                      size: 32.0,
-                    ),
-                  ),
-                  if (e.label != null)
-                    Text(
-                      e.label ?? '',
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                      overflow: TextOverflow.clip,
-                      softWrap: false,
-                    ),
-                ],
-              );
-            }).toList(),
-      ),
-    );
-  }
+  TekioIconCarousel({required this.menuButton, super.key})
+    : super(
+        builder:
+            (context) => CarouselView(
+              itemExtent: 120.0,
+              shrinkExtent: 120.0,
+              onTap:
+                  (index) => TekioMenuNotifier(
+                    navPath: menuButton.buttonItems[index].navPath,
+                  ).dispatch(context),
+              children:
+                  menuButton.buttonItems.map((e) {
+                    return Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 5.0),
+                          child: Icon(
+                            IconData(
+                              int.parse(e.iconCode ?? '0xe237'),
+                              fontFamily: 'MaterialIcons',
+                            ),
+                            size: 32.0,
+                          ),
+                        ),
+                        if (e.label != null)
+                          Text(
+                            e.label ?? '',
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                            overflow: TextOverflow.clip,
+                            softWrap: false,
+                          ),
+                      ],
+                    );
+                  }).toList(),
+            ),
+      );
 }

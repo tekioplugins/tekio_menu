@@ -14,7 +14,12 @@ class TekioBaseMenuBuilder extends NotificationListener<TekioMenuNotifier> {
         child: ListView(
           children:
               baseMenuData.menuListButtons
-                  .map((e) => e.buttonType.buildButton(e))
+                  .map(
+                    (e) => SizedBox(
+                      height: e.menuButtonHeight,
+                      child: e.buttonType.buildButton(e),
+                    ),
+                  )
                   .toList(),
         ),
       );
