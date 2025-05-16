@@ -5,43 +5,50 @@ import 'package:tekio_menu/widgets/base_menu_builder.dart';
 class TekioImageButton extends Builder {
   final TekioMenuButtonData menuButton;
 
-  TekioImageButton({required this.menuButton, super.key})
+  TekioImageButton({required this.menuButton})
     : super(
+        key: Key(menuButton.menuButtonKey ?? UniqueKey().toString()),
         builder:
             (context) => Row(
-              spacing: 10,
+              spacing: menuButton.menuButtonSpacing,
               children:
                   menuButton.buttonItems
                       .map(
-                        (e) => Flexible(
-                          child: ElevatedButton(
-                            style: ButtonStyle(
-                              padding: WidgetStatePropertyAll(EdgeInsets.zero),
-                            ),
-                            onPressed:
+                        (e) => Expanded(
+                          child: InkWell(
+                            key: Key(e.buttonKey ?? UniqueKey().toString()),
+                            onTap:
                                 () => TekioMenuNotifier(
                                   navPath: e.navPath,
                                 ).dispatch(context),
-                            child: Stack(
-                              alignment: AlignmentDirectional.bottomStart,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                  child: Image(
-                                    width: double.infinity,
-                                    fit: BoxFit.fill,
-                                    image: NetworkImage(e.imageUrl ?? ''),
-                                  ),
+                            child: Ink(
+                              height: double.maxFinite,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                image: DecorationImage(
+                                  image: NetworkImage(e.imageUrl ?? ''),
+                                  fit: BoxFit.fill,
                                 ),
-                                if (e.label != null)
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                      left: 15.0,
-                                      bottom: 15.0,
-                                    ),
-                                    child: Text(e.label ?? ''),
-                                  ),
-                              ],
+                              ),
+                              child:
+                                  e.label != null
+                                      ? Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                            left: 10.0,
+                                            bottom: 10.0,
+                                          ),
+                                          child: Text(
+                                            e.label ?? '',
+                                            style:
+                                                Theme.of(
+                                                  context,
+                                                ).textTheme.titleMedium,
+                                          ),
+                                        ),
+                                      )
+                                      : const SizedBox.shrink(),
                             ),
                           ),
                         ),

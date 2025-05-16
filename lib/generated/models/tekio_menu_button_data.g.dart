@@ -23,6 +23,9 @@ TekioMenuButtonData _$TekioMenuButtonDataFromJson(Map<String, dynamic> json) =>
           [],
       menuButtonKey: json['menuButtonKey'] as String?,
       menuButtonHeight: (json['menuButtonHeight'] as num?)?.toDouble() ?? 100.0,
+      menuButtonWidth: (json['menuButtonWidth'] as num?)?.toDouble() ?? 100.0,
+      menuButtonSpacing:
+          (json['menuButtonSpacing'] as num?)?.toDouble() ?? 10.0,
     );
 
 Map<String, dynamic> _$TekioMenuButtonDataToJson(
@@ -30,6 +33,8 @@ Map<String, dynamic> _$TekioMenuButtonDataToJson(
 ) => <String, dynamic>{
   'order': instance.order,
   'menuButtonHeight': instance.menuButtonHeight,
+  'menuButtonWidth': instance.menuButtonWidth,
+  'menuButtonSpacing': instance.menuButtonSpacing,
   'menuButtonKey': instance.menuButtonKey,
   'buttonType': _$TekioButtonEnumEnumMap[instance.buttonType]!,
   'buttonItems': instance.buttonItems,

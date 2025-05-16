@@ -5,12 +5,16 @@ import 'package:tekio_menu/widgets/base_menu_builder.dart';
 class TekioImageCarousel extends Builder {
   final TekioMenuButtonData menuButton;
 
-  TekioImageCarousel({required this.menuButton, super.key})
+  TekioImageCarousel({required this.menuButton})
     : super(
+        key: Key(menuButton.menuButtonKey ?? UniqueKey().toString()),
         builder:
             (context) => CarouselView(
-              itemExtent: 330,
-              shrinkExtent: 200,
+              itemExtent: menuButton.menuButtonWidth,
+              shrinkExtent: menuButton.menuButtonWidth * 0.90,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8.0),
+              ),
               onTap:
                   (index) => TekioMenuNotifier(
                     navPath: menuButton.buttonItems[index].navPath,
@@ -24,9 +28,7 @@ class TekioImageCarousel extends Builder {
                             Image(
                               width: double.infinity,
                               fit: BoxFit.fill,
-                              image: NetworkImage(
-                                e.imageUrl ?? '', // Use Default image
-                              ),
+                              image: NetworkImage(e.imageUrl ?? ''),
                             ),
                             if (e.label != null)
                               Padding(
@@ -36,8 +38,10 @@ class TekioImageCarousel extends Builder {
                                 ),
                                 child: Text(
                                   e.label ?? '',
-                                  overflow: TextOverflow.clip,
-                                  softWrap: false,
+                                  style:
+                                      Theme.of(context)
+                                          .textTheme
+                                          .titleMedium, //TODO: Fix poor text visibility
                                 ),
                               ),
                           ],

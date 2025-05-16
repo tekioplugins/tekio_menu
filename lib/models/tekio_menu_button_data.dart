@@ -10,7 +10,11 @@ class TekioMenuButtonData {
   @JsonKey(name: 'order')
   int? order;
   @JsonKey(name: 'menuButtonHeight', defaultValue: 100.0)
-  double? menuButtonHeight;
+  double menuButtonHeight;
+  @JsonKey(name: 'menuButtonWidth', defaultValue: 100.0)
+  double menuButtonWidth;
+  @JsonKey(name: 'menuButtonSpacing', defaultValue: 10.0)
+  double menuButtonSpacing;
   @JsonKey(name: 'menuButtonKey')
   String? menuButtonKey;
   @JsonKey(
@@ -27,7 +31,9 @@ class TekioMenuButtonData {
     required this.buttonType,
     required List<TekioButtonData> buttonItems,
     this.menuButtonKey,
-    this.menuButtonHeight,
+    required this.menuButtonHeight,
+    required this.menuButtonWidth,
+    required this.menuButtonSpacing,
   }) : buttonItems = buttonItems.sorted(
          (a, b) => (a.order ?? 0).compareTo((b.order ?? 0)),
        );

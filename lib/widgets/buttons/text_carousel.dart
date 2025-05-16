@@ -5,24 +5,32 @@ import 'package:tekio_menu/widgets/base_menu_builder.dart';
 class TekioTextCarousel extends Builder {
   final TekioMenuButtonData menuButton;
 
-  TekioTextCarousel({required this.menuButton, super.key})
+  TekioTextCarousel({required this.menuButton})
     : super(
+        key: Key(menuButton.menuButtonKey ?? UniqueKey().toString()),
         builder:
             (context) => CarouselView(
-              itemExtent: 120.0,
-              shrinkExtent: 120.0,
+              itemExtent: menuButton.menuButtonWidth,
+              shrinkExtent: menuButton.menuButtonWidth,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8.0),
+              ),
               onTap:
                   (index) => TekioMenuNotifier(
                     navPath: menuButton.buttonItems[index].navPath,
                   ).dispatch(context),
               children:
                   menuButton.buttonItems.map((e) {
-                    return Text(
-                      e.label ?? '',
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                      overflow: TextOverflow.clip,
-                      softWrap: false,
-                      textAlign: TextAlign.center,
+                    return Padding(
+                      key: Key(e.buttonKey ?? UniqueKey().toString()),
+                      padding: const EdgeInsets.all(
+                        8.0,
+                      ), //TODO: Add to decoration
+                      child: Text(
+                        e.label ?? '',
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.titleSmall,
+                      ),
                     );
                   }).toList(),
             ),
