@@ -15,6 +15,7 @@ class TekioTextCarousel extends Builder {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8.0),
               ),
+              padding: EdgeInsets.only(right: menuButton.menuButtonSpacing),
               onTap:
                   (index) => TekioMenuNotifier(
                     navPath: menuButton.buttonItems[index].navPath,

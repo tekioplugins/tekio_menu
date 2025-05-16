@@ -15,7 +15,7 @@ class TekioImageCarousel extends Builder {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8.0),
               ),
-              padding: EdgeInsets.only(right: 10),
+              padding: EdgeInsets.only(right: menuButton.menuButtonSpacing),
               onTap:
                   (index) => TekioMenuNotifier(
                     navPath: menuButton.buttonItems[index].navPath,
