@@ -6,7 +6,7 @@ class TekioBaseMenuBuilder extends NotificationListener<TekioMenuNotifier> {
   final Function(String path) navigateTo;
   TekioBaseMenuBuilder({required this.baseMenuData, required this.navigateTo})
     : super(
-        key: Key(baseMenuData.menuKey ?? ''),
+        key: Key(baseMenuData.menuKey ?? UniqueKey().toString()),
         onNotification: (notification) {
           navigateTo(notification.navPath);
           return true;

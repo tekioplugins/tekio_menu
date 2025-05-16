@@ -8,7 +8,7 @@ part '../generated/models/tekio_menu_data.g.dart';
 class TekioMenuData {
   @JsonKey(name: 'menuKey')
   String? menuKey;
-  @JsonKey(name: 'menuListButtons')
+  @JsonKey(name: 'menuListButtons', defaultValue: [])
   List<TekioMenuButtonData> menuListButtons;
 
   TekioMenuData({

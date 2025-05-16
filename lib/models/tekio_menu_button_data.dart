@@ -17,7 +17,7 @@ class TekioMenuButtonData {
     unknownEnumValue: TekioButtonEnum.unknown,
   )
   TekioButtonEnum buttonType;
-  @JsonKey(name: 'buttonItems')
+  @JsonKey(name: 'buttonItems', defaultValue: [])
   List<TekioButtonData> buttonItems;
 
   TekioMenuButtonData({
