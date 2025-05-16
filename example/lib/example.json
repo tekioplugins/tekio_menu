@@ -1,8 +1,9 @@
 {
    "menuKey": "menuKeyExample",
-   "menuListItems": [
+   "menuListButtons": [
       {
          "buttonType": "iconCarousel",
+         "menuButtonHeight": 100.0,
          "buttonItems": [
             {
                "iconCode": "0xe6a1",
@@ -48,6 +49,7 @@
       },
       {
          "buttonType": "textCarousel",
+         "menuButtonHeight": 60.0,
          "buttonItems": [
             {
                "label": "label_example",
@@ -85,6 +87,8 @@
       },
       {
          "buttonType": "imageCarousel",
+         "menuButtonHeight": 200.0,
+         "menuButtonWidth": 330.0,
          "buttonItems": [
             {
                "imageUrl": "https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_1.png",
@@ -120,6 +124,7 @@
       },
       {
          "buttonType": "imageButton",
+         "menuButtonHeight": 200.0,
          "buttonItems": [
             {
                "imageUrl": "https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_1.png",
@@ -130,6 +135,7 @@
       },
       {
          "buttonType": "imageButton",
+         "menuButtonHeight": 200.0,
          "buttonItems": [
             {
                "imageUrl": "https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_1.png",
@@ -145,6 +151,7 @@
       },
       {
          "buttonType": "imageButton",
+         "menuButtonHeight": 150.0,
          "buttonItems": [
             {
                "imageUrl": "https://flutter.github.io/assets-for-api-docs/assets/material/content_based_color_scheme_1.png",
