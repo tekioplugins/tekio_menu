@@ -9,6 +9,7 @@ class TekioImageButton extends Builder {
     : super(
         builder:
             (context) => Row(
+              spacing: 10,
               children:
                   menuButton.buttonItems
                       .map(
