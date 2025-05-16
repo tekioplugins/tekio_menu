@@ -23,11 +23,9 @@ class TekioIconCarousel extends Builder {
                   menuButton.buttonItems.map((e) {
                     return Padding(
                       key: Key(e.buttonKey ?? UniqueKey().toString()),
-                      padding: const EdgeInsets.all(
-                        8.0,
-                      ), //TODO: Add to decoration
+                      padding: const EdgeInsets.all(8.0),
                       child: Column(
-                        spacing: 15, //TODO: Add to payload
+                        spacing: 15,
                         children: [
                           Expanded(
                             child: Icon(
@@ -35,7 +33,7 @@ class TekioIconCarousel extends Builder {
                                 int.parse(e.iconCode ?? '0xe237'),
                                 fontFamily: 'MaterialIcons',
                               ),
-                              size: 32.0, //TODO: Add to payload
+                              size: 32.0,
                             ),
                           ),
                           if (e.label != null)

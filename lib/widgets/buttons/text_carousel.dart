@@ -24,9 +24,7 @@ class TekioTextCarousel extends Builder {
                   menuButton.buttonItems.map((e) {
                     return Padding(
                       key: Key(e.buttonKey ?? UniqueKey().toString()),
-                      padding: const EdgeInsets.all(
-                        8.0,
-                      ), //TODO: Add to decoration
+                      padding: const EdgeInsets.all(8.0),
                       child: Text(
                         e.label ?? '',
                         textAlign: TextAlign.center,
