@@ -58,31 +58,3 @@ class TekioImageCarousel extends Builder {
             ),
       );
 }
-
-
-
-
-// Stack(
-//                           alignment: AlignmentDirectional.bottomStart,
-//                           children: [
-//                             Image(
-//                               width: double.infinity,
-//                               fit: BoxFit.fill,
-//                               image: NetworkImage(e.imageUrl ?? ''),
-//                             ),
-//                             if (e.label != null)
-//                               Padding(
-//                                 padding: const EdgeInsets.only(
-//                                   left: 15.0,
-//                                   bottom: 15.0,
-//                                 ),
-//                                 child: Text(
-//                                   e.label ?? '',
-//                                   style:
-//                                       Theme.of(context)
-//                                           .textTheme
-//                                           .titleMedium, //TODO: Fix poor text visibility
-//                                 ),
-//                               ),
-//                           ],
-//                         ),
