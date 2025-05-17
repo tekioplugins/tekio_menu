@@ -1,5 +1,6 @@
 ## 0.0.3
 
+* Refactored models and widget codes
 * Improved documentation
 
 ## 0.0.2
