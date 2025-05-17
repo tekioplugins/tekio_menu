@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tekio_menu/models/tekio_menu_button_data.dart';
-import 'package:tekio_menu/widgets/buttons/icon_carousel.dart';
-import 'package:tekio_menu/widgets/buttons/image_button.dart';
-import 'package:tekio_menu/widgets/buttons/image_carousel.dart';
-import 'package:tekio_menu/widgets/buttons/text_carousel.dart';
+import 'package:tekio_menu/models/tekio_data.dart';
+import 'package:tekio_menu/widgets/tekio_menu.dart';
 
 Widget buildIconCarousel(TekioMenuButtonData menuButton) =>
     TekioIconCarousel(menuButton: menuButton);

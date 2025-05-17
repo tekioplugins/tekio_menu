@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:tekio_menu/models/tekio_button_enum.dart';
-import 'package:tekio_menu/models/tekio_button_data.dart';
+
+import 'tekio_data.dart';
 
 part '../generated/models/tekio_menu_button_data.g.dart';
 
