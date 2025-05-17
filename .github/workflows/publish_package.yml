@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Get dart sdk
-        uses: dart-lang/setup-dart@v1
+      - name: Get Flutter sdk
+        uses: subosito/flutter-action@v2
       - name: Publish package
-        run: dart pub publish --force
+        run: flutter pub publish --force
