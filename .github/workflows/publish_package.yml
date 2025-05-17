@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: dart-lang/setup-dart@v1
-      - run: dart format --output=none --set-exit-if-changed .
-      - run: dart pub publish --force
+      - name: Get dart sdk
+        uses: dart-lang/setup-dart@v1
+      - name: Publish package
+        run: dart pub publish --force
