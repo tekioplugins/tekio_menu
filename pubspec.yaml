@@ -1,6 +1,6 @@
 name: tekio_menu
 description: "This package allows you to build a complex menus with just a json file. This package is a part of the tekio plugins."
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/tekioplugins/tekio_menu
 repository: https://github.com/tekioplugins/tekio_menu
 

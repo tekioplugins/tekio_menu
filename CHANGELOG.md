@@ -1,4 +1,4 @@
-## 0.1.0
+## 0.1.1
 
 * Refactored models and widget codes
 * Improved documentation
