@@ -10,7 +10,6 @@ topics:
   - dynamic
   - menu
   
-
 environment:
   sdk: ^3.7.2
   flutter: ">=1.17.0"
