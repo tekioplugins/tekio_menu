@@ -6,20 +6,13 @@ on:
       - main
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-
+      
       - name: Get dart sdk
         uses: dart-lang/setup-dart@v1
-      
-      - name: Get Flutter sdk
-        uses: subosito/flutter-action@v2
-
-      - name: Install dependencies
-        run: flutter pub get
 
       - name: Verify formatting
         run: dart format --output=none --set-exit-if-changed .
