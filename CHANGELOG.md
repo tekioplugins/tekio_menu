@@ -1,4 +1,3 @@
-## 0.0.1
+## 0.0.2
 
-* Testing Publishing.
-* Initial Package Version
+* Testing app publishing with github actions
