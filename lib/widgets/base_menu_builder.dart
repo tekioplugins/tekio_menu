@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tekio_menu/models/tekio_menu_data.dart';
+import 'package:tekio_menu/models/tekio_data.dart';
 import 'package:tekio_menu/utils/tekio_menu_decoration.dart';
+import 'package:tekio_menu/utils/tekio_menu_notifier.dart';
 
 class TekioBaseMenuBuilder extends NotificationListener<TekioMenuNotifier> {
   final TekioMenuData baseMenuData;
@@ -29,9 +30,4 @@ class TekioBaseMenuBuilder extends NotificationListener<TekioMenuNotifier> {
                    .toList(),
          ),
        );
-}
-
-class TekioMenuNotifier extends Notification {
-  final String navPath;
-  TekioMenuNotifier({required this.navPath});
 }

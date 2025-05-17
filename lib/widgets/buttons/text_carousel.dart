@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tekio_menu/models/tekio_menu_button_data.dart';
-import 'package:tekio_menu/widgets/base_menu_builder.dart';
+import 'package:tekio_menu/models/tekio_data.dart';
+import 'package:tekio_menu/utils/tekio_menu_notifier.dart';
 
 class TekioTextCarousel extends Builder {
   final TekioMenuButtonData menuButton;
