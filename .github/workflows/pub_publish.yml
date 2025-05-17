@@ -11,7 +11,6 @@ jobs:
       id-token: write
     runs-on: ubuntu-latest
     steps:
-      - name: Get Flutter sdk
-        uses: subosito/flutter-action@v2
-      - name: Publish
-        run: flutter pub publish --force
+      - uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+      - run: dart pub publish --force
