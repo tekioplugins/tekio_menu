@@ -1,22 +1,13 @@
-
 # Base Menu Builder
-This is the base json necessary to create the menu.
 
-  
+This is the base json necessary to create the menu.
 
 ## Fields
 
-  
-
 You can edit the following fields:
 
-  
 - menuKey - Menu key.
-- menuListItems **(required)** - This is a list of items that will consist on the menu buttons.
-
-
-
-  
+- menuListButtons **(required)** - This is a list of items that will consist on the menu buttons.
 
 ## Json Format
 
@@ -24,7 +15,7 @@ You can edit the following fields:
 
     {
        "menuKey":"example_key",
-       "menuListItems":[
+       "menuListButtons":[
           // Add items here
        ]
     }
