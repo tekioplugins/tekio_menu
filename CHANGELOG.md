@@ -1,4 +1,4 @@
-## 0.1.2
+## 0.1.4
 
 * Put correct license
 * Added public_member_api_docs
