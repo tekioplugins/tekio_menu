@@ -1,3 +1,8 @@
+## 0.1.2
+
+* Put correct license
+* Added public_member_api_docs
+
 ## 0.1.1
 
 * Refactored models and widget codes
